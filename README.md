@@ -29,7 +29,7 @@ Linear Regression and Support Vector Machine models are also implemented but are
 GridSearchCV is used for hyperparameter tunning.
 Mean Squared Error is used to evaluate the model performance on test data. MSE is calculated in 5 different regions of similarity to check the model performance for the lowest and highest similar sentences and the results are both saved in mse.csv file and visulized in a bar chart.
 
-The main Function input are the training, validation and test data file pathes.
+The main Function inputs are the training, validation and test data file pathes.
 Insode the main Function feature_concat Function is called for each of the datasets to prepare fetures for the model. Thes results are fed into the feature_selection_ef model to train and then predict similarity measures using Random Forest model and generate outputs.
 
 
