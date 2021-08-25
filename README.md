@@ -1,12 +1,15 @@
 # Sentence Similarity
-The sentence_similarity.py contsains the code to capture sentence similarity of sentence pairs. 
+The sentence_similarity.py contsains the code to capture sentence similarity score of sentence pairs. The pipeline prepares features (similarity measures) to train a machine learning model and then to predict the similarity score. Pearson correlation is also used to evaluate the feature importance and the model performance. Different stages of the machine learning pipeline for this project will be discussed below.
 
-Preprocess Function:
-This function uses SpaCy and nltk libraries to prepare the text for the pipeline. It removes punctuations, numbers and symbols from the clinical text. Then tokenization is applied and stemming is used to extract the root of each word.
-Similarity measures in this pipeline include: 
+Data Preprocessing: 
+At first text is preprocessed, tokenized and stemmed.
+The preprocess Function uses SpaCy and Natural Language Toolkit (nltk) libraries to prepare the text for the pipeline. It removes punctuations, numbers and symbols from the clinical text. Then tokenization is applied and stemming is used to extract the root of each word.
+
+Feature Engineering:
+Similarity measures (features) in this pipeline include: 
 
 1) Token based similarity measures 
-Cao, MinHash, Johnson, Blue similarity measures are calculated using abydos.distance package and Word_overlap measure is calculated using the same Word_overlap function.
+Cao, MinHash, Johnson, Blue similarity measures are calculated using abydos.distance package libraries and Word_overlap (jaccard) similarity measure is calculated using the Word_overlap Function in the model.
 Then token based similarity measures are concatenated using token_based_sim Function.
 
 2) Sequence based similarity measures
