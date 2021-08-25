@@ -1,14 +1,18 @@
 # Sentence Similarity
 The sentence_similarity.py contsains the code to capture sentence similarity of sentence pairs. 
+
 Preprocess Function:
 This function uses SpaCy and nltk libraries to prepare the text for the pipeline. It removes punctuations, numbers and symbols from the clinical text. Then tokenization is applied and stemming is used to extract the root of each word.
 Similarity measures in this pipeline include: 
+
 1) Token based similarity measures 
 Cao, MinHash, Johnson, Blue similarity measures are calculated using abydos.distance package and Word_overlap measure is calculated using the same Word_overlap function.
 Then token based similarity measures are concatenated using token_based_sim Function.
+
 2) Sequence based similarity measures
 Bag , Levenshtein and Smith-Waterman measures are calculated using abydos.distance module.
 Then sequnce based measures are concatenated using seq_based_sim Function.
+
 3) Semantic based similarity measures
 BioSentVec is calculated using get_biosentvec_similarity Function.
 Word2Vec model is trained on BioWordVec data and is implemented in the pipeline by get_wmd_distance Function but is not used in the final model. 
