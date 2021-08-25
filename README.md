@@ -8,15 +8,15 @@ The preprocess Function uses SpaCy and Natural Language Toolkit (nltk) libraries
 2. Feature Engineering:
 Similarity measures (features) in this pipeline include: 
 
-1) Token based similarity measures 
+a) Token based similarity measures 
 Cao, MinHash, Johnson, Blue similarity measures are calculated using abydos.distance package libraries and Word_overlap (jaccard) similarity measure is calculated using the Word_overlap Function in the model.
 Then, token based similarity measures are concatenated using token_based_sim Function.
 
-2) Sequence based similarity measures
+b) Sequence based similarity measures
 Bag , Levenshtein and Smith-Waterman measures are calculated using abydos.distance package libraries.
 Then, sequnce based measures are concatenated using seq_based_sim Function.
 
-3) Semantic based similarity measures
+c) Semantic based similarity measures
 BioSentVec is calculated using get_biosentvec_similarity Function.
 Word2Vec model is trained on BioWordVec data and is implemented in the pipeline by get_wmd_distance Function but it is not included in the final model. 
 The Average vector similarity is calculated using get_mean_vector_similarity but it the measure is not used in the final model.
