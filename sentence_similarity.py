@@ -224,7 +224,6 @@ def get_biosentvec_similarity(text1, text2):
 #model_wordvec = Word2Vec('/panfs/pan1/bionlp/lulab/qingyu/elaheh/SentenceSimilarity/models/BioWordVec_PubMed_MIMICIII_d200.bin')
 #vocab = model_wordvec.wv.key_to_index
 def get_wmd_distance(text1, text2):
-  #model =models.Word2Vec.load_word2vec_format('/panfs/pan1/bionlp/lulab/qingyu/elaheh/SentenceSimilarity/models/BioWordVec_PubMed_MIMICIII_d200.bin')
   distance = model_wordvec.wv.wmdistance(text1, text2)
   return distance
 #semantic similarity through avg vector & cosine similarity
